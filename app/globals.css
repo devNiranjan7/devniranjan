@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+    /* Colors */
+    --color-background: #080808;
+    --color-foreground: #ffffff;
+
+    --color-primary: #e3d2a3;
+    --color-primary-text: #ffffff;
+    --color-accent: #e3d2a3;
+
+    --color-secondary-text: #828282;
+    --color-border: #2a2a2a;
+
+    /* Surfaces */
+    --color-surface: #1a1a1a;
+    --color-surface-elevated: #1e1e1e;
+    --color-black: #000000;
+
+    /* Typography */
+    --font-heading: var(--font-manrope);
+    --font-body: var(--font-inter);
+
+    /* Radius */
+    --radius-button: 8px;
+    --radius-card: 12px;
+    --radius-small: 6px;
+    --radius-image: 12px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+    --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+
+    /* Layout */
+    --container-width: 1200px;
+}
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+    }
+
+    body {
+        margin: 0;
+        background: var(--color-background);
+        color: var(--color-foreground);
+        font-family: var(--font-body);
+        font-size: 18px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        -ms-overflow-style: none;
+    }
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+        font-family: var(--font-heading);
+        line-height: 1.15;
+    }
+
+    h1 {
+        font-size: clamp(2.125rem, 5vw, 3.5rem);
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: clamp(2rem, 4vw, 2.5rem);
+        font-weight: 600;
+    }
+
+    h3 {
+        font-size: clamp(1.5rem, 3vw, 1.75rem);
+        font-weight: 600;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+        font: inherit;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    section {
+        scroll-margin-top: 5rem;
+    }
+}
