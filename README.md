@@ -4,7 +4,7 @@ A modern, responsive developer portfolio built to showcase my skills, projects, 
 
 ## Live Demo
 
-[View Portfolio](YOUR_DEPLOYED_URL)
+[View Portfolio](https://devniranjan-gamma.vercel.app)
 
 ## Features
 

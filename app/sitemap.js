@@ -1,7 +1,7 @@
 export default function sitemap() {
     return [
         {
-            url: "https://your-domain.com",
+            url: "https://devniranjan-gamma.vercel.app",
             lastModified: new Date(),
             changeFrequency: "monthly",
             priority: 1,

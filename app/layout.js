@@ -17,7 +17,7 @@ const manrope = Manrope({
 });
 
 export const metadata = {
-    metadataBase: new URL("http://localhost:3000"),
+    metadataBase: new URL("https://devniranjan-gamma.vercel.app"),
     title: "Dev Niranjan",
     description:
         "Portfolio of Dev Niranjan, a full stack developer building modern web applications with React, Next.js, Node.js, and MongoDB.",
