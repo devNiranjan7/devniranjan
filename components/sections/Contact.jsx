@@ -6,7 +6,7 @@ import SectionHeading from "../ui/SectionHeading.jsx";
 import { fade, fadeUp } from "../motion/variants.js";
 import { toast } from "react-toastify";
 
-const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
 
 export default function Contact() {
     const [isSending, setIsSending] = useState(false);
