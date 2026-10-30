@@ -6,21 +6,33 @@ import SectionHeading from "../ui/SectionHeading.jsx";
 import { fade, fadeUp } from "../motion/variants.js";
 import { toast } from "react-toastify";
 
+const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+
 export default function Contact() {
     const [isSending, setIsSending] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSending(true);
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+        formData.set("access_key", WEB3FORMS_ACCESS_KEY);
+        formData.set("subject", "New message from portfolio contact form");
+        formData.set("from_name", formData.get("name") || "Portfolio Contact");
+        formData.set("replyto", formData.get("email") || "");
+
         try {
-            const response = await fetch("https://formspree.io/f/xgawbqbn", {
+            const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                body: new FormData(e.target),
+                body: formData,
                 headers: { Accept: "application/json" },
             });
+
             if (response.ok) {
                 toast.success("Message sent successfully!");
-                e.target.reset();
+                form.reset();
             } else {
                 toast.error("Something went wrong.");
             }
@@ -76,13 +88,12 @@ export default function Contact() {
                             name="message"
                             placeholder="Your Message"
                             required
-                            className="rounded-(--radius-button) border border-(--color-border) bg-transparent px-5 py-4 text-(--color-foreground) outline-none transition focus:border-(--color-accent)
-                            "
+                            className="rounded-(--radius-button) border border-(--color-border) bg-transparent px-5 py-4 text-(--color-foreground) outline-none transition focus:border-(--color-accent)"
                         />
                         <button
                             disabled={isSending}
                             type="submit"
-                            className={`w-fit rounded-(--radius-button) bg-(--color-accent) px-7 py-3.5 text-sm font-semibold text-[#080808] shadow-(--shadow-sm) transition-all duration-200 hover:-translate-y-0.5 hover:shadow-(--shadow-md) ${
+                            className={`w-fit rounded-(--radius-button) bg-(--color-accent) px-7 py-3.5 text-sm font-semibold text-[#080808] shadow-(--shadow-sm) transition-all duration-200 hover:opacity-90 ${
                                 isSending ? "cursor-not-allowed opacity-60" : ""
                             }`}
                         >
