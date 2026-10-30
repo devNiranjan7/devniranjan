@@ -14,7 +14,7 @@ A modern, responsive developer portfolio built to showcase my skills, projects, 
 - Interactive skills section
 - Project showcase with live demos and GitHub links
 - Resume access
-- Working contact form
+- Working contact form powered by web3forms
 - SEO optimized
 
 ## Tech Stack
@@ -24,8 +24,28 @@ A modern, responsive developer portfolio built to showcase my skills, projects, 
 - Tailwind CSS
 - Framer Motion
 - JavaScript
-- Formspree
+- web3forms
 - Vercel
+
+## Contact Form Setup
+
+This portfolio uses web3forms for the contact form. To make it work locally or in production:
+
+1. Create an account at [web3forms.com](https://web3forms.com)
+2. Copy your access key from the dashboard
+3. Replace the placeholder in `components/sections/Contact.jsx`:
+
+```js
+const WEB3FORMS_ACCESS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+```
+
+with your actual key:
+
+```js
+const WEB3FORMS_ACCESS_KEY = "your-real-access-key";
+```
+
+For a cleaner setup, you can also store it in `.env.local` and read it from `process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY`.
 
 ## Contact
 
