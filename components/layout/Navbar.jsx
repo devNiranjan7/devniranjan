@@ -106,6 +106,7 @@ export default function Navbar() {
                             ))}
                             <Link
                                 href="/resume/Dev_Niranjan_Resume.pdf"
+                                prefetch={false}
                                 target="_blank"
                                 onClick={() => setIsMenuOpen(false)}
                                 className="mt-4 rounded-(--radius-button) bg-(--color-accent) px-5 py-3 text-center text-sm font-semibold text-[#080808] shadow-(--shadow-sm) transition-all duration-200 hover:bg-[#f0d598] hover:shadow-(--shadow-md)"
