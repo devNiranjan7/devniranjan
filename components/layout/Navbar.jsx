@@ -24,13 +24,17 @@ export default function Navbar() {
             });
         }, 300);
     };
+
     useEffect(() => {
-        document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+        const previousOverflow = document.body.style.overflow;
+
+        document.body.style.overflow = isMenuOpen ? "hidden" : previousOverflow;
 
         return () => {
-            document.body.style.overflow = "auto";
+            document.body.style.overflow = previousOverflow;
         };
     }, [isMenuOpen]);
+
     return (
         <header className="sticky top-0 z-50 border-b border-(--color-border) bg-(--color-background)">
             <nav className="mx-auto flex h-20 w-full max-w-(--container-width) items-center justify-between px-6 lg:px-16">
@@ -108,6 +112,7 @@ export default function Navbar() {
                                 href="/resume/Dev_Niranjan_Resume.pdf"
                                 prefetch={false}
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 onClick={() => setIsMenuOpen(false)}
                                 className="mt-4 rounded-(--radius-button) bg-(--color-accent) px-5 py-3 text-center text-sm font-semibold text-[#080808] shadow-(--shadow-sm) transition-all duration-200 hover:bg-[#f0d598] hover:shadow-(--shadow-md)"
                             >
