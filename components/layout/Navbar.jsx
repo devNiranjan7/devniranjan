@@ -59,6 +59,7 @@ export default function Navbar() {
                     ))}
                     <Link
                         href="/resume/Dev_Niranjan_Resume.pdf"
+                        prefetch={false}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="rounded-(--radius-button) bg-(--color-accent) px-5 py-2.5 text-sm font-semibold text-[#080808] shadow-(--shadow-sm) transition-all duration-200 hover:-translate-y-0.5 hover:bg-[#f0d598] hover:shadow-(--shadow-md)"

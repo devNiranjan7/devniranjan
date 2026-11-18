@@ -65,6 +65,7 @@ export default function Hero() {
                         </Link>
                         <Link
                             href="/resume/Dev_Niranjan_Resume.pdf"
+                            prefetch={false}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center justify-center rounded-(--radius-button) border border-(--color-border) px-7 py-3.5 text-sm font-semibold text-(--color-foreground) transition-all duration-200 hover:-translate-y-0.5 hover:border-(--color-accent) hover:text-(--color-accent)"
