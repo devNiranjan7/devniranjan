@@ -21,6 +21,9 @@ export const metadata = {
     title: "Dev Niranjan",
     description:
         "Portfolio of Dev Niranjan, a full stack developer building modern web applications with React, Next.js, Node.js, and MongoDB.",
+    verification: {
+        google: "KsG4qnMPayUCoxEZyzfKSqTzpg6dgWFYF3LeV28RkkE",
+    },
     keywords: [
         "Dev Niranjan",
         "Full Stack Developer",
